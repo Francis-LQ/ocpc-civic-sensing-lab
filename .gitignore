@@ -19,6 +19,7 @@ env/
 Thumbs.db
 .idea/
 .vscode/
+skill_cicd_world.html
 
 # Logs and generated run outputs
 *.log
