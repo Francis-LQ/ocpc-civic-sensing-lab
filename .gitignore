@@ -1,0 +1,30 @@
+# Office temporary files
+~$*
+*.tmp
+
+# Python/generated caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs and generated run outputs
+*.log
+outputs/
+
+# Large local source archives
+*.zip
+*.7z
+*.rar
