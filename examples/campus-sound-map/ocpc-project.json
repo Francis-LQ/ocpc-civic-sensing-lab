@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1.0",
+  "project_id": "campus-sound-map",
+  "title": "校园声音地图 / Campus Sound Map",
+  "summary": "使用合成数据演示如何记录校园不同时段的声音强度，并将结果转化为可讨论的公共议题。",
+  "status": "draft",
+  "public_issue": "https://github.com/Francis-LQ/ocpc-civic-sensing-lab/issues/new",
+  "maintainers": [
+    "Francis-LQ"
+  ],
+  "licenses": {
+    "code": "MulanPSL-2.0",
+    "documents": "MulanOWL-BY-SA-1.0",
+    "data": "MulanOWL-BY-SA-1.0"
+  },
+  "public_artifacts": [
+    {
+      "path": "README.md",
+      "type": "documentation"
+    },
+    {
+      "path": "CONTRIBUTORS.md",
+      "type": "contributor-record"
+    },
+    {
+      "path": "RISK_AND_PRIVACY.md",
+      "type": "safety-review"
+    },
+    {
+      "path": "artifacts/sample-summary.csv",
+      "type": "synthetic-data-summary"
+    }
+  ],
+  "safety_and_data_release": {
+    "minors_personal_data_included": false,
+    "contact_information_included": false,
+    "precise_locations_included": false,
+    "unauthorized_raw_data_included": false,
+    "public_data_scope": "仅包含为模板演示生成的合成分区级声音强度摘要，不包含真实参与者或精确位置。",
+    "reviewed_by": "Francis-LQ",
+    "reviewed_on": "2026-06-01"
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Francis-LQ/ocpc-civic-sensing-lab/blob/main/toolkit/schema/ocpc-project.schema.json",
+  "title": "OCPC Project Manifest",
+  "description": "Minimum public manifest for an Open Civic Project Commons project package.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project_id",
+    "title",
+    "summary",
+    "status",
+    "public_issue",
+    "maintainers",
+    "licenses",
+    "public_artifacts",
+    "safety_and_data_release"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "project_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "active",
+        "archived"
+      ]
+    },
+    "public_issue": {
+      "type": "string",
+      "minLength": 1
+    },
+    "maintainers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?$"
+      }
+    },
+    "licenses": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "documents",
+        "data"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 1
+        },
+        "documents": {
+          "type": "string",
+          "minLength": 1
+        },
+        "data": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "public_artifacts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "type"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "safety_and_data_release": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "minors_personal_data_included",
+        "contact_information_included",
+        "precise_locations_included",
+        "unauthorized_raw_data_included",
+        "public_data_scope",
+        "reviewed_by",
+        "reviewed_on"
+      ],
+      "properties": {
+        "minors_personal_data_included": {
+          "const": false
+        },
+        "contact_information_included": {
+          "const": false
+        },
+        "precise_locations_included": {
+          "const": false
+        },
+        "unauthorized_raw_data_included": {
+          "const": false
+        },
+        "public_data_scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reviewed_by": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reviewed_on": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    }
+  }
+}

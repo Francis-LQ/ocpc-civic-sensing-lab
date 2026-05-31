@@ -1,0 +1,4 @@
+zone,time_window,synthetic_average_db,synthetic_sample_count
+entrance,morning,58,12
+study-area,noon,47,12
+activity-area,afternoon,66,12
