@@ -1,0 +1,36 @@
+name: Bug report
+description: 报告 OCPC Toolkit 校验器、模板或 CI 中的可复现问题。
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。请勿粘贴个人数据、未授权原始资料或账号凭据。
+  - type: textarea
+    id: problem
+    attributes:
+      label: 问题说明
+      description: 说明实际行为、预期行为和影响。
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现步骤
+      description: 提供最小复现步骤和运行命令。
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境信息
+      description: 说明操作系统、Python 版本和相关日志。
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: 数据安全确认
+      options:
+        - label: 我已移除个人数据、精确位置、未授权原始资料和账号凭据。
+          required: true

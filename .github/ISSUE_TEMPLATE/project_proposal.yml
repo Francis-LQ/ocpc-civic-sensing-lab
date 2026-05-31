@@ -1,0 +1,36 @@
+name: OCPC project proposal
+description: 提议一个可公开、可复用的公民项目模板或示例。
+title: "[Project] "
+labels:
+  - proposal
+body:
+  - type: input
+    id: civic_issue
+    attributes:
+      label: 公共议题
+      description: 项目关注什么公共问题？
+    validations:
+      required: true
+  - type: textarea
+    id: artifacts
+    attributes:
+      label: 计划公开的成果
+      description: 列出模板、代码、聚合数据、硬件说明或展示材料。
+    validations:
+      required: true
+  - type: textarea
+    id: safety
+    attributes:
+      label: 安全与数据发布边界
+      description: 说明授权、数据最小化、去标识化和审阅方案。
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: 提交确认
+      options:
+        - label: 我不会提交未成年人个人信息、联系方式或可识别个人轨迹的精确位置。
+          required: true
+        - label: 我不会提交未经授权的原始资料或学生作品。
+          required: true

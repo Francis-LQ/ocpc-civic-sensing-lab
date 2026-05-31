@@ -1,0 +1,27 @@
+name: Documentation improvement
+description: 提议修正文档、模板说明或跨文化术语表达。
+title: "[Docs] "
+labels:
+  - documentation
+body:
+  - type: textarea
+    id: current
+    attributes:
+      label: 当前问题
+      description: 指出文档路径、段落或术语。
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: 建议修改
+      description: 说明建议内容和目标读者。
+    validations:
+      required: true
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: 权利确认
+      options:
+        - label: 建议中不包含未经授权的第三方材料或个人数据。
+          required: true
