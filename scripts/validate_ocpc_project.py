@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import Any
 
 MANIFEST_NAME = "ocpc-project.json"
+SUPPORTED_SCHEMA_VERSION = "0.1.0"
 REQUIRED_PROJECT_FILES = (
     "README.md",
     "CONTRIBUTORS.md",
@@ -87,6 +88,9 @@ def validate_manifest(project_dir: Path, manifest: dict[str, Any]) -> list[str]:
     for field in ("schema_version", "project_id", "title", "summary", "public_issue"):
         require_non_empty_string(manifest, field, errors)
 
+    if manifest.get("schema_version") != SUPPORTED_SCHEMA_VERSION:
+        errors.append(f"schema_version must be {SUPPORTED_SCHEMA_VERSION}")
+
     project_id = manifest.get("project_id")
     if isinstance(project_id, str) and not PROJECT_ID_PATTERN.fullmatch(project_id):
         errors.append("project_id must use lowercase kebab-case")
@@ -115,6 +119,7 @@ def validate_manifest(project_dir: Path, manifest: dict[str, Any]) -> list[str]:
     if not isinstance(public_artifacts, list) or not public_artifacts:
         errors.append("public_artifacts must contain at least one published artifact")
     else:
+        project_root = project_dir.resolve()
         for index, artifact in enumerate(public_artifacts):
             label = f"public_artifacts[{index}]"
             if not isinstance(artifact, dict):
@@ -124,8 +129,18 @@ def validate_manifest(project_dir: Path, manifest: dict[str, Any]) -> list[str]:
             artifact_type = artifact.get("type")
             if not isinstance(artifact_path, str) or not artifact_path.strip():
                 errors.append(f"{label}.path must be a non-empty string")
-            elif not (project_dir / artifact_path).is_file():
-                errors.append(f"{label}.path does not exist: {artifact_path}")
+            else:
+                resolved_artifact = (project_dir / artifact_path).resolve()
+                try:
+                    resolved_artifact.relative_to(project_root)
+                except ValueError:
+                    errors.append(
+                        f"{label}.path must stay inside the project directory: "
+                        f"{artifact_path}"
+                    )
+                else:
+                    if not resolved_artifact.is_file():
+                        errors.append(f"{label}.path does not exist: {artifact_path}")
             if not isinstance(artifact_type, str) or not artifact_type.strip():
                 errors.append(f"{label}.type must be a non-empty string")
 

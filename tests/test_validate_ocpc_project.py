@@ -66,6 +66,13 @@ class ValidateOcpcProjectTests(unittest.TestCase):
         errors = VALIDATOR.validate_project(self.project_dir)
         self.assertTrue(any("missing required fields: public_issue" in error for error in errors))
 
+    def test_unknown_schema_version_is_rejected(self) -> None:
+        manifest = self.read_manifest()
+        manifest["schema_version"] = "9.9.9"
+        self.write_manifest(manifest)
+        errors = VALIDATOR.validate_project(self.project_dir)
+        self.assertIn("schema_version must be 0.1.0", errors)
+
     def test_missing_required_template(self) -> None:
         (self.project_dir / "RISK_AND_PRIVACY.md").unlink()
         errors = VALIDATOR.validate_project(self.project_dir)
@@ -91,6 +98,24 @@ class ValidateOcpcProjectTests(unittest.TestCase):
         self.assertIn(
             "safety_and_data_release.minors_personal_data_included "
             "must be false before publication",
+            errors,
+        )
+
+    def test_artifact_path_outside_project_is_rejected(self) -> None:
+        outside_path = self.project_dir.parent / "outside.txt"
+        outside_path.write_text("outside project package", encoding="utf-8")
+        manifest = self.read_manifest()
+        manifest["public_artifacts"].append(
+            {
+                "path": "../outside.txt",
+                "type": "invalid-outside-artifact",
+            }
+        )
+        self.write_manifest(manifest)
+        errors = VALIDATOR.validate_project(self.project_dir)
+        self.assertIn(
+            "public_artifacts[4].path must stay inside the project directory: "
+            "../outside.txt",
             errors,
         )
 
