@@ -1,0 +1,4 @@
+zone,morning_temperature_c,afternoon_temperature_c,morning_relative_db,afternoon_relative_db,interpretation
+entrance,24.8,28.7,58,65,午后更热且相对更嘈杂
+study-area,23.9,26.1,47,51,变化较小且相对安静
+activity-area,25.3,29.2,61,69,午后暴晒感和活动声景更明显

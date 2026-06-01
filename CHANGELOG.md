@@ -4,6 +4,20 @@
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-06-01
+
+### Added
+
+- 统一零依赖 CLI：`scaffold`、`validate` 和 `render`。
+- 校园微气候与声景组合合成示例、协议、Rubric 和匿名个人页结构。
+- 静态项目页生成与 GitHub Pages 部署工作流。
+- 面向 14 天邀请制 Beta 的课程边界、数据字典和运营检查单。
+
+### Changed
+
+- 公开清单升级到 `schema_version = 0.2.0`，增加主题、协议和发布审阅字段。
+- 兼容入口 `validate_ocpc_project.py` 复用新的校验实现。
+
 ## [0.1.1] - 2026-06-01
 
 ### Fixed

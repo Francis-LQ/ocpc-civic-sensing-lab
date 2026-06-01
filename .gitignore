@@ -24,6 +24,8 @@ skill_cicd_world.html
 # Logs and generated run outputs
 *.log
 outputs/
+.tmp-site/
+_site/
 
 # Large local source archives
 *.zip

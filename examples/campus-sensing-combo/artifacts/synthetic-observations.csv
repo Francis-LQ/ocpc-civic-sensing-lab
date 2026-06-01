@@ -1,0 +1,7 @@
+participant_alias,zone,time_window,measurement_method,temperature_c,humidity_percent,light_lux,relative_db,soundscape_score_1_to_5,thermal_comfort_score_1_to_5,reviewed_note
+river-window,entrance,morning,reference-demo,24.8,61,820,58,3,4,入口区晨间较明亮
+river-window,entrance,afternoon,reference-demo,28.7,56,1380,65,2,3,入口区午后更热且更嘈杂
+river-window,study-area,morning,household-meter,23.9,63,420,47,4,4,学习区晨间较安静
+river-window,study-area,afternoon,household-meter,26.1,59,510,51,4,4,学习区变化较小
+river-window,activity-area,morning,phone-observation,25.3,60,760,61,3,4,活动区晨间已有活动
+river-window,activity-area,afternoon,phone-observation,29.2,54,1490,69,2,2,活动区午后暴晒感明显

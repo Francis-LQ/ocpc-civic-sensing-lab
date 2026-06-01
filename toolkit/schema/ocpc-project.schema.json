@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/Francis-LQ/ocpc-civic-sensing-lab/blob/main/toolkit/schema/ocpc-project.schema.json",
   "title": "OCPC Project Manifest",
-  "description": "Minimum public manifest for an Open Civic Project Commons project package.",
+  "description": "Minimum public manifest for an Open Civic Project Commons package.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -13,13 +13,16 @@
     "status",
     "public_issue",
     "maintainers",
+    "themes",
+    "protocols",
     "licenses",
     "public_artifacts",
-    "safety_and_data_release"
+    "safety_and_data_release",
+    "publication_review"
   ],
   "properties": {
     "schema_version": {
-      "const": "0.1.0"
+      "const": "0.2.0"
     },
     "project_id": {
       "type": "string",
@@ -50,6 +53,22 @@
       "items": {
         "type": "string",
         "pattern": "^[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?$"
+      }
+    },
+    "themes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "protocols": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
       }
     },
     "licenses": {
@@ -133,6 +152,47 @@
         "reviewed_on": {
           "type": "string",
           "format": "date"
+        }
+      }
+    },
+    "publication_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "reviewed_by",
+        "reviewed_on",
+        "private_paths_included",
+        "minors_original_audio_included",
+        "identifiable_conversations_included",
+        "withdrawal_mapping_recorded"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "draft",
+            "approved"
+          ]
+        },
+        "reviewed_by": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reviewed_on": {
+          "type": "string",
+          "format": "date"
+        },
+        "private_paths_included": {
+          "const": false
+        },
+        "minors_original_audio_included": {
+          "const": false
+        },
+        "identifiable_conversations_included": {
+          "const": false
+        },
+        "withdrawal_mapping_recorded": {
+          "type": "boolean"
         }
       }
     }

@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "project_id": "your-project-id",
   "title": "项目标题 / Project title",
   "summary": "用一段简短文字说明公共议题、方法和公开成果。",
@@ -7,6 +7,14 @@
   "public_issue": "https://github.com/Francis-LQ/ocpc-civic-sensing-lab/issues/new",
   "maintainers": [
     "your-github-account"
+  ],
+  "themes": [
+    "microclimate",
+    "soundscape"
+  ],
+  "protocols": [
+    "3 个模糊分区 × 2 个时段",
+    "不同手机的 dB 读数仅用于设备内相对比较"
   ],
   "licenses": {
     "code": "MulanPSL-2.0",
@@ -25,6 +33,18 @@
     {
       "path": "RISK_AND_PRIVACY.md",
       "type": "safety-review"
+    },
+    {
+      "path": "PROTOCOL.md",
+      "type": "sampling-protocol"
+    },
+    {
+      "path": "RUBRIC.md",
+      "type": "learning-rubric"
+    },
+    {
+      "path": "artifacts/observation-template.csv",
+      "type": "observation-template"
     }
   ],
   "safety_and_data_release": {
@@ -32,8 +52,17 @@
     "contact_information_included": false,
     "precise_locations_included": false,
     "unauthorized_raw_data_included": false,
-    "public_data_scope": "仅发布已获授权且完成去标识化处理的聚合数据。",
+    "public_data_scope": "仅发布经审核、去标识化的聚合数据和获授权公开成果。",
     "reviewed_by": "your-github-account",
     "reviewed_on": "2026-06-01"
+  },
+  "publication_review": {
+    "status": "draft",
+    "reviewed_by": "your-github-account",
+    "reviewed_on": "2026-06-01",
+    "private_paths_included": false,
+    "minors_original_audio_included": false,
+    "identifiable_conversations_included": false,
+    "withdrawal_mapping_recorded": false
   }
 }

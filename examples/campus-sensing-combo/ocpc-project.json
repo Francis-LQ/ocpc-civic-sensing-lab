@@ -1,19 +1,21 @@
 {
   "schema_version": "0.2.0",
-  "project_id": "campus-sound-map",
-  "title": "校园声音地图 / Campus Sound Map",
-  "summary": "使用合成数据演示如何记录校园不同时段的声音强度，并将结果转化为可讨论的公共议题。",
-  "status": "draft",
+  "project_id": "campus-sensing-combo",
+  "title": "校园感知组合 / Campus Sensing Combo",
+  "summary": "使用完全合成的数据演示校园微气候与声景并行观察、聚合展示和安全发布流程。",
+  "status": "active",
   "public_issue": "https://github.com/Francis-LQ/ocpc-civic-sensing-lab/issues/new",
   "maintainers": [
     "Francis-LQ"
   ],
   "themes": [
+    "microclimate",
     "soundscape"
   ],
   "protocols": [
-    "分区级、时段级声音强度摘要",
-    "不上传原音频，不比较不同设备的绝对 dB"
+    "3 个模糊分区 × 2 个时段",
+    "手机 dB 读数仅用于设备内相对比较",
+    "本示例不包含真实参与者、原音频或精确位置"
   ],
   "licenses": {
     "code": "MulanPSL-2.0",
@@ -42,8 +44,16 @@
       "type": "learning-rubric"
     },
     {
-      "path": "artifacts/sample-summary.csv",
-      "type": "synthetic-data-summary"
+      "path": "artifacts/synthetic-observations.csv",
+      "type": "synthetic-observations"
+    },
+    {
+      "path": "artifacts/synthetic-summary.csv",
+      "type": "synthetic-summary"
+    },
+    {
+      "path": "participants/river-window/README.md",
+      "type": "synthetic-voluntary-personal-page"
     }
   ],
   "safety_and_data_release": {
@@ -51,7 +61,7 @@
     "contact_information_included": false,
     "precise_locations_included": false,
     "unauthorized_raw_data_included": false,
-    "public_data_scope": "仅包含为模板演示生成的合成分区级声音强度摘要，不包含真实参与者或精确位置。",
+    "public_data_scope": "仅包含人工生成的模糊分区级合成数据和匿名展示页，不包含真实参与者或原音频。",
     "reviewed_by": "Francis-LQ",
     "reviewed_on": "2026-06-01"
   },
