@@ -41,6 +41,8 @@ python -m unittest discover -s tests -v
 
 参与贡献前请阅读 `CONTRIBUTING.md`。维护与发布流程见 `docs/MAINTENANCE.md`。
 首轮校园感知 Beta 的公开课程边界见 `docs/beta/`。
+校园感知组合合成示例站点：
+<https://francis-lq.github.io/ocpc-civic-sensing-lab/>。
 
 ## English
 
@@ -72,3 +74,5 @@ boundaries and `CONTRIBUTING.md` before contributing.
 
 The public boundaries for the first Campus Sensing Beta are documented in
 `docs/beta/`.
+The synthetic Campus Sensing Combo site is available at
+<https://francis-lq.github.io/ocpc-civic-sensing-lab/>.
