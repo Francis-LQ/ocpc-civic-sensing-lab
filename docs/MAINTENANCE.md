@@ -8,7 +8,9 @@
 
 ```bash
 python scripts/validate_ocpc_project.py examples/campus-sound-map
-python scripts/validate_ocpc_project.py toolkit/templates/project
+python scripts/ocpc_toolkit.py validate examples/campus-sensing-combo
+python scripts/ocpc_toolkit.py validate toolkit/templates/project
+python scripts/ocpc_toolkit.py render examples/campus-sensing-combo --output .tmp-site
 python -m unittest discover -s tests -v
 ```
 
