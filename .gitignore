@@ -27,6 +27,20 @@ outputs/
 .tmp-site/
 _site/
 
+# CSL Beta private operating data
+# Public empty templates live in docs/beta/ledger-templates/.
+.local-private/
+.private/
+beta-private/
+private-ledger/
+projects/**/audio-pending/
+projects/**/consent/
+projects/**/identity/
+projects/**/private/
+projects/**/raw/
+projects/**/registration/
+projects/**/withdrawal/
+
 # Large local source archives
 *.zip
 *.7z

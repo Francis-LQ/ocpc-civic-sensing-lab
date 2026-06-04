@@ -23,6 +23,7 @@ jobs:
         run: |
           python scripts/validate_ocpc_project.py examples/campus-sound-map
           python scripts/ocpc_toolkit.py validate examples/campus-sensing-combo
+          python scripts/ocpc_toolkit.py validate projects/campus-sensing-beta-2026-06
 
       - name: Validate reusable template
         run: python scripts/ocpc_toolkit.py validate toolkit/templates/project

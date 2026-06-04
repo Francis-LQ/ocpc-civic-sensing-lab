@@ -18,3 +18,8 @@
 - `HARDWARE_INVENTORY.md`：2–3 套参考设备盘点表。
 - `LEGAL_REVIEW_CHECKLIST.md`：招募前必须完成的人工审阅。
 - `PRIVATE_OPERATIONS_BOUNDARY.md`：私有主账本与公开仓库分工。
+- `OPERATIONS_RUNBOOK.md`：2026-06-04 至 2026-07-04 的执行门禁、角色和每日循环。
+- `RECRUITMENT_AND_ONBOARDING.md`：熟人邀请、筛选、飞书入口和启动说明文案。
+- `PUBLIC_RELEASE_CHECKLIST.md`：公开项目包、个人页、render 和 release 前检查。
+- `DAY30_RETROSPECTIVE_TEMPLATE.md`：完成率、数据质量、NPS 和下一步渠道判断模板。
+- `ledger-templates/`：私有主账本的空白表头模板，不得填写真实数据后提交。

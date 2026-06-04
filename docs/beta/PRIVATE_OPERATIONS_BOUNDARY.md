@@ -16,6 +16,9 @@
 | `audio-review-log.csv` | 音频时长、审核、删除日期和公开状态 |
 | `withdrawal-log.csv` | 撤回请求、公开资产映射和处理完成时间 |
 
+空白表头模板保存在 `docs/beta/ledger-templates/`，只能作为本地加密目录的建表参考。
+填写真实数据后的台账不得提交到 GitHub。
+
 ## 禁止进入 GitHub
 
 - 身份映射、联系方式、年龄详情、精确位置和个人轨迹。
@@ -26,3 +29,6 @@
 
 每次生成公开页前，先在私有主账本完成授权和撤回映射检查，再将审核后的公开包
 交给 `ocpc_toolkit.py validate` 和 `render`。
+
+`.gitignore` 已排除 `private-ledger/`、`beta-private/` 和项目包中的 `private/`、
+`raw/`、`consent/`、`registration/`、`withdrawal/`、`audio-pending/` 等路径。

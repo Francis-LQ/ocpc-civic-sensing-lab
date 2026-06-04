@@ -17,6 +17,7 @@ FastAPI + React 产品。
 ```bash
 python scripts/validate_ocpc_project.py examples/campus-sound-map
 python scripts/ocpc_toolkit.py validate examples/campus-sensing-combo
+python scripts/ocpc_toolkit.py validate projects/campus-sensing-beta-2026-06
 python scripts/ocpc_toolkit.py render examples/campus-sensing-combo --output .tmp-site
 python -m unittest discover -s tests -v
 ```
@@ -41,6 +42,8 @@ python -m unittest discover -s tests -v
 
 参与贡献前请阅读 `CONTRIBUTING.md`。维护与发布流程见 `docs/MAINTENANCE.md`。
 首轮校园感知 Beta 的公开课程边界见 `docs/beta/`。
+真实 Beta 的公开草案包见 `projects/campus-sensing-beta-2026-06/`；该目录不得包含
+报名表、授权记录、身份映射、待审音频或撤回日志。
 校园感知组合合成示例站点：
 <https://francis-lq.github.io/ocpc-civic-sensing-lab/>。
 
@@ -59,6 +62,7 @@ project bundles. It is not a deployed FastAPI + React product.
 ```bash
 python scripts/validate_ocpc_project.py examples/campus-sound-map
 python scripts/ocpc_toolkit.py validate examples/campus-sensing-combo
+python scripts/ocpc_toolkit.py validate projects/campus-sensing-beta-2026-06
 python scripts/ocpc_toolkit.py render examples/campus-sensing-combo --output .tmp-site
 python -m unittest discover -s tests -v
 ```
@@ -74,5 +78,8 @@ boundaries and `CONTRIBUTING.md` before contributing.
 
 The public boundaries for the first Campus Sensing Beta are documented in
 `docs/beta/`.
+The draft public package for the real Beta is in
+`projects/campus-sensing-beta-2026-06/`; private registrations, consent records,
+identity maps, pending audio, and withdrawal logs must stay outside GitHub.
 The synthetic Campus Sensing Combo site is available at
 <https://francis-lq.github.io/ocpc-civic-sensing-lab/>.
