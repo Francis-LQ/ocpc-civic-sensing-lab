@@ -15,6 +15,15 @@ python -m unittest discover -s tests -v
 
 4. 提交 PR，说明变更、验证结果和许可边界。
 
+## 社区活动提案流程
+
+如果你想发起一次 CSL 社区共创活动，请先阅读 `docs/community/`：
+
+1. 复制 `ACTION_CANVAS.md`，填写 7 天小挑战的公共议题、对象、任务、角色和公开边界。
+2. 使用 Community Activity issue 模板提交提案，不要直接提交真实报名表、联系方式、授权记录、原始音频、精确位置或学生作品。
+3. 维护者确认安全边界后，再使用 `toolkit/templates/project/` 或 CLI 创建 OCPC 项目草案包。
+4. 活动结束后，只提交经审核的公开成果、去标识化聚合摘要、复盘和复用建议。
+
 ## 可接受贡献
 
 - OCPC 项目模板、JSON Schema 与校验器改进。

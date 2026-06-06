@@ -44,6 +44,8 @@ python -m unittest discover -s tests -v
 首轮校园感知 Beta 的公开课程边界见 `docs/beta/`。
 真实 Beta 的公开草案包见 `projects/campus-sensing-beta-2026-06/`；该目录不得包含
 报名表、授权记录、身份映射、待审音频或撤回日志。
+社区成员如希望发起新的 7 天共创挑战，请从 `docs/community/` 开始，并先提交
+Community Activity issue。活动通过安全边界确认后，再进入 OCPC 项目包流程。
 校园感知组合合成示例站点：
 <https://francis-lq.github.io/ocpc-civic-sensing-lab/>。
 
@@ -81,5 +83,8 @@ The public boundaries for the first Campus Sensing Beta are documented in
 The draft public package for the real Beta is in
 `projects/campus-sensing-beta-2026-06/`; private registrations, consent records,
 identity maps, pending audio, and withdrawal logs must stay outside GitHub.
+Community members who want to start a new 7-day challenge should begin with
+`docs/community/` and open a Community Activity issue before creating a project
+package.
 The synthetic Campus Sensing Combo site is available at
 <https://francis-lq.github.io/ocpc-civic-sensing-lab/>.
