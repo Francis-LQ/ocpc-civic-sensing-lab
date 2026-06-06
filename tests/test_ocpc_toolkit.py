@@ -16,6 +16,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS_DIR = REPO_ROOT / "scripts"
 EXAMPLE_DIR = REPO_ROOT / "examples" / "campus-sensing-combo"
 BETA_PROJECT_DIR = REPO_ROOT / "projects" / "campus-sensing-beta-2026-06"
+VIBE_PROJECT_DIR = REPO_ROOT / "projects" / "vibe-coding-boundary-sensing"
 sys.path.insert(0, str(SCRIPTS_DIR))
 
 import ocpc_toolkit as toolkit  # noqa: E402
@@ -174,6 +175,21 @@ class CampusSensingBetaDraftTests(unittest.TestCase):
             self.assertIn(
                 "publication_review.status must be approved before render",
                 toolkit.render_project(BETA_PROJECT_DIR, output_dir),
+            )
+
+
+class VibeCodingBoundaryDraftTests(unittest.TestCase):
+    """Keep the Vibe Coding boundary project valid but unpublished until review."""
+
+    def test_vibe_coding_draft_package_validates(self) -> None:
+        self.assertEqual([], toolkit.validate_project(VIBE_PROJECT_DIR))
+
+    def test_vibe_coding_draft_package_does_not_render(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output_dir = Path(temp_dir) / "site"
+            self.assertIn(
+                "publication_review.status must be approved before render",
+                toolkit.render_project(VIBE_PROJECT_DIR, output_dir),
             )
 
 

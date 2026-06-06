@@ -1,0 +1,88 @@
+{
+  "schema_version": "0.2.0",
+  "project_id": "vibe-coding-boundary-sensing",
+  "title": "Vibe Coding 身心边界感知 / Vibe Coding Boundary Sensing",
+  "summary": "基于高校编程学习者无边界编码与休息切换困难议题的 7 天 CSL 社区挑战草案，公开层只发布去标识化聚合摘要、协议、Rubric 和复盘。",
+  "status": "draft",
+  "public_issue": "https://github.com/Francis-LQ/ocpc-civic-sensing-lab/issues/13",
+  "maintainers": [
+    "Francis-LQ"
+  ],
+  "themes": [
+    "vibe-coding",
+    "wellbeing-boundaries",
+    "service-learning",
+    "community-challenge"
+  ],
+  "protocols": [
+    "默认面向 18 岁及以上高校编程学习者和开源社群成员",
+    "7 天记录编码任务闭环、停工边界、休息切换和恢复行动",
+    "活动不是诊断、治疗、心理咨询或健康评估",
+    "公开包只接收审核后的去标识化聚合摘要、协议、Rubric 和复盘"
+  ],
+  "licenses": {
+    "code": "MulanPSL-2.0",
+    "documents": "MulanOWL-BY-SA-1.0",
+    "data": "NOASSERTION"
+  },
+  "public_artifacts": [
+    {
+      "path": "README.md",
+      "type": "documentation"
+    },
+    {
+      "path": "CONTRIBUTORS.md",
+      "type": "contributor-record"
+    },
+    {
+      "path": "RISK_AND_PRIVACY.md",
+      "type": "safety-review"
+    },
+    {
+      "path": "PROTOCOL.md",
+      "type": "sampling-protocol"
+    },
+    {
+      "path": "RUBRIC.md",
+      "type": "learning-rubric"
+    },
+    {
+      "path": "ACTION_CANVAS.md",
+      "type": "community-action-canvas"
+    },
+    {
+      "path": "RELEASE_CANDIDATE_CHECKLIST.md",
+      "type": "publication-checklist"
+    },
+    {
+      "path": "RETROSPECTIVE_TEMPLATE.md",
+      "type": "retrospective-template"
+    },
+    {
+      "path": "artifacts/boundary-log-template.csv",
+      "type": "observation-template"
+    },
+    {
+      "path": "artifacts/public-aggregation-template.csv",
+      "type": "aggregation-template"
+    }
+  ],
+  "safety_and_data_release": {
+    "minors_personal_data_included": false,
+    "contact_information_included": false,
+    "precise_locations_included": false,
+    "unauthorized_raw_data_included": false,
+    "public_data_scope": "当前仅包含公开草案、空白模板和发布门禁；真实发布时仅包含审核后的去标识化聚合摘要，不包含原始日记、心理自述、联系方式、身份映射、音频、图片或学生作品。",
+    "reviewed_by": "Francis-LQ",
+    "reviewed_on": "2026-06-06"
+  },
+  "publication_review": {
+    "status": "draft",
+    "reviewed_by": "Francis-LQ",
+    "reviewed_on": "2026-06-06",
+    "private_paths_included": false,
+    "minors_original_audio_included": false,
+    "identifiable_conversations_included": false,
+    "withdrawal_mapping_recorded": false
+  }
+}

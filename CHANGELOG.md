@@ -16,6 +16,7 @@
 - 增加私有主账本空白模板和 `.gitignore` 防误提交规则。
 - 增加真实 Beta 公开草案包 `projects/campus-sensing-beta-2026-06/`，用于后续审核后发布聚合成果。
 - 增加 CSL 社区发起者工具包、7 天小挑战行动模板和社区活动 issue 模板。
+- 增加 `vibe-coding-boundary-sensing` CSL 社区项目草案包，用于高校编程学习者身心边界感知 7 天挑战。
 
 ## [0.2.0] - 2026-06-01
 

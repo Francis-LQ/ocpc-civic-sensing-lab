@@ -46,6 +46,8 @@ python -m unittest discover -s tests -v
 报名表、授权记录、身份映射、待审音频或撤回日志。
 社区成员如希望发起新的 7 天共创挑战，请从 `docs/community/` 开始，并先提交
 Community Activity issue。活动通过安全边界确认后，再进入 OCPC 项目包流程。
+当前社区项目草案包括 `projects/vibe-coding-boundary-sensing/`，该项目关注
+高校编程学习者的编码节奏与身心边界观察，不提供诊断、治疗或心理咨询。
 校园感知组合合成示例站点：
 <https://francis-lq.github.io/ocpc-civic-sensing-lab/>。
 
@@ -86,5 +88,8 @@ identity maps, pending audio, and withdrawal logs must stay outside GitHub.
 Community members who want to start a new 7-day challenge should begin with
 `docs/community/` and open a Community Activity issue before creating a project
 package.
+The current community draft package includes
+`projects/vibe-coding-boundary-sensing/`, which focuses on coding rhythm and
+boundary observation rather than diagnosis, treatment, or counseling.
 The synthetic Campus Sensing Combo site is available at
 <https://francis-lq.github.io/ocpc-civic-sensing-lab/>.
